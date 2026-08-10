@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kaio Barbosa — TI</title>
+<meta name="description" content="Portfólio de TI">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<canvas id="bg-canvas" aria-hidden="true"></canvas>
+<div class="bg-scrim" aria-hidden="true"></div>
+<div class="bg-vignette" aria-hidden="true"></div>
+<div class="bg-noise" aria-hidden="true"></div>
+
+<!-- ============ TITLEBAR ============ -->
+<header class="nav" id="nav">
+  <div class="nav__inner">
+    <a href="#top" class="nav__brand">Kaio Barbosa</a>
+
+    <nav class="nav__links" id="nav-links">
+      <a href="#sobre" data-section="sobre">Sobre</a>
+      <a href="#projetos" data-section="projetos">Projetos</a>
+      <a href="#experiencia" data-section="experiencia">Experiência</a>
+      <a href="#habilidades" data-section="habilidades">Habilidades</a>
+      <a href="#formacao" data-section="formacao">Formação</a>
+      <a href="#contato" data-section="contato">Contato</a>
+    </nav>
+
+    <button class="nav__toggle" id="nav-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav-links">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="nav__progress" id="nav-progress"></div>
+</header>
+
+<main class="content" id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <p class="eyebrow">Portfólio</p>
+    <h1 class="hero__title">
+      Problemas técnicos,<br>
+      <span class="hero__title-accent">resolvidos com métodologia.</span>
+    </h1>
+    <p class="hero__subtitle">
+      Sou o tipo de pessoa que abre o aparelho pra ver como funciona por
+      dentro. Isso me levou do suporte técnico à automação, sempre resolvendo
+      o problema com a menor complicação possível.
+    </p>
+
+
+
+    <div class="hero__cta">
+      <a href="#projetos" class="btn btn--primary">Ver projetos</a>
+      <a href="#contato" class="btn btn--ghost">Entrar em contato</a>
+    </div>
+  </section>
+
+  <!-- SOBRE -->
+  <section class="block" id="sobre">
+    <div class="block__row">
+      <p class="block__label">Sobre</p>
+      <p class="block__value">
+          Sou autodidata. aprendi mexendo desde criança, quebrando e consertando até entender.
+          o que me ensinou a
+          investigar um problema até a raiz.
+          Dou suporte técnico em inglês, Uso Python como
+          ferramenta prática pra automatizar tarefas e ganhar tempo. Hoje uso IA
+          do mesmo jeito: acelero meus projetos, escrevo código mais rápido e já
+          montei sistemas de RAG com LLMs locais, mantendo os dados sob meu
+          controle.
+      </p>
+    </div>
+  </section>
+
+  <!-- PROJETOS -->
+  <section class="block" id="projetos">
+    <h2 class="block__title">Projetos Recentes</h2>
+    <p class="block__lead">
+      Nenhum desses projetos nasceu de um plano grande. Todos começaram porque
+      alguma tarefa estava me tomando tempo demais e eu preferi passar um
+      tempo automatizando ela do que continuar repetindo na mão. Abaixo estão
+      as tecnologias que usei em cada um.
+    </p>
+
+    <div class="detail-list">
+      <div class="detail-row">
+        <p class="detail-row__label">IA aplicada<br>RAG e LLMs locais</p>
+        <div class="detail-row__content">
+          <ul class="dash-list">
+            <li>Montagem de pipelines de RAG (busca com contexto), rodando LLMs localmente com LM Studio, Ollama e llama.cpp, sem depender de API paga e mantendo os dados sob meu controle.</li>
+            <li>Uso de bancos de dados vetoriais (Chroma, LanceDB) para indexar e consultar minha própria documentação e arquivos direto, em vez de procurar na mão.</li>
+            <li>Também uso IA pra escrever e revisar código mais rápido, o que reforça meu jeito de trabalhar: resolver o problema com a ferramenta certa, não empilhar teoria que eu não vou usar.</li>
+          </ul>
+          <div class="tech-tags">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">LM Studio</span>
+            <span class="tech-tag">Ollama</span>
+            <span class="tech-tag">llama.cpp</span>
+            <span class="tech-tag">Chroma</span>
+            <span class="tech-tag">LanceDB</span>
+          </div>
+        </div>
+      </div>
+      <div class="detail-row">
+        <p class="detail-row__label">FocusFlow<br>App desktop de produtividade (uso pessoal)</p>
+        <div class="detail-row__content">
+          <ul class="dash-list">
+            <li>Aplicativo desktop simples para organizar minha própria rotina, construído em Python para resolver um problema pessoal de produtividade.</li>
+            <li>Sistema de tarefas drag-and-drop e rastreamento de processos ativos.</li>
+          </ul>
+          <div class="tech-tags">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">PyQt5</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="detail-row">
+        <p class="detail-row__label">Ferramentas para Realidade Virtual<br>e Modelagem 3D (scripts pessoais)</p>
+        <div class="detail-row__content">
+          <ul class="dash-list">
+            <li>Pequeno tradutor em tempo real utilizando LLMs locais e a API do Google Tradutor.</li>
+            <li>Conversor de dados de face tracking (pacotes JSON transformados no protocolo OSC), com comunicação de rede via UDP.</li>
+            <li>Scripts simples de otimização de fluxo de trabalho para Unity e Blender, feitos para acelerar minhas próprias tarefas.</li>
+          </ul>
+          <div class="tech-tags">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">OSC</span>
+            <span class="tech-tag">UDP</span>
+            <span class="tech-tag">Unity</span>
+            <span class="tech-tag">Blender</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIÊNCIA -->
+  <section class="block" id="experiencia">
+    <h2 class="block__title">Experiência profissional</h2>
+
+    <div class="detail-list">
+      <div class="detail-row detail-row--date">
+        <p class="detail-row__label">2021 — Atual</p>
+        <div class="detail-row__content">
+          <h3>Suporte Técnico Remoto Informal</h3>
+          <p>
+            Prestação de suporte técnico internacional (inglês), focado em
+            diagnóstico de falhas no Windows, investigação de causa-raiz e
+            incompatibilidades de softwares.
+          </p>
+        </div>
+      </div>
+      <div class="detail-list">
+        <div class="detail-row detail-row--date">
+          <p class="detail-row__label">2024</p>
+          <div class="detail-row__content">
+              <h3>Projeto Wilson Sons — Instituto Rogério Steinberg</h3>
+            <p>Desenvolvimento de solução colaborativa em Python, com foco em ciência de dados.</p>
+            <p>Criação de dashboards interativos no Power BI para visualização de dados.</p>
+            <p>Apresentação do projeto para representantes da Wilson Sons, visando a otimização de operações de rebocadores e demais processos internos.</p>
+          </div>
+        </div>
+
+      <div class="detail-row detail-row--date">
+        <p class="detail-row__label">2022 — 2024</p>
+        <div class="detail-row__content">
+          <h3>Projeto Eco Social — Marketing Digital e Automação</h3>
+          <ul class="dash-list">
+            <li>Participação ativa ao longo de 17 meses em projetos com foco social e em Direitos Humanos.</li>
+            <li>Responsável pela edição de vídeo utilizando Adobe Premiere e tratamento de imagens no Photoshop.</li>
+            <li>Implementação de estratégias de SEO e automatização de postagem de conteúdos digitais.</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- HABILIDADES (complementares aos projetos) -->
+  <section class="block" id="habilidades">
+    <h2 class="block__title">Outras competências</h2>
+    <p class="block__lead">
+      Além do que aparece nos projetos acima.
+    </p>
+
+    <ul class="pill-list pill-list--wide">
+        <li>Windows</li>
+        <li>Linux (uso básico)</li>
+        <li>BIOS</li>
+        <li>Diagnóstico de falhas</li>
+        <li>Git</li>
+        <li>Blender (Modelagem 3D)</li>
+        <li>Unity</li>
+        <li>Photoshop</li>
+        <li>DaVinci Resolve</li>
+        <li>Visual Studio / VSCode</li>
+        <li>Segurança de Dados</li>
+        <li>Raciocínio Lógico</li>
+        <li>Shaders(HSLS\GLSL)</li>
+        <li>Python</li>
+        <li>SQL (básico)</li>
+        <li>C# (básico)</li>
+
+        <li>Inglês Avançado/Fluente</li>
+    </ul>
+
+    <p class="block__note">
+      Meu foco de verdade é Python, usado no essencial pra automatizar o que
+      preciso. Também já tive contato com C#, GDScript e JavaScript ao longo
+      do caminho.
+    </p>
+  </section>
+
+  <!-- FORMAÇÃO -->
+  <section class="block" id="formacao">
+    <h2 class="block__title">Formação Acadêmica</h2>
+
+    <div class="detail-list">
+      <div class="detail-row">
+        <p class="detail-row__label">Liceu Nilo Peçanha</p>
+        <div class="detail-row__content">
+          <p>Ensino Médio Completo.</p>
+        </div>
+      </div>
+
+      <div class="detail-row">
+        <p class="detail-row__label">Instituto Rogério Steinberg</p>
+        <div class="detail-row__content">
+          <p>Curso com foco de ciência de dados, Em parceria com a Wilson Sons.</p>
+        </div>
+      </div>
+
+      <div class="detail-row">
+        <p class="detail-row__label">SENAI / Jovem Eco Social</p>
+        <div class="detail-row__content">
+          <p>Marketing Digital.</p>
+        </div>
+      </div>
+
+      <div class="detail-row">
+        <p class="detail-row__label">Escola Virtual Bradesco</p>
+        <div class="detail-row__content">
+          <p>Segurança da Tecnologia e Python.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTATO -->
+  <section class="block" id="contato">
+    <h2 class="block__title">Vamos conversar</h2>
+    <p class="block__lead">
+      Aberto a oportunidades em suporte técnico, automação de processos e
+      desenvolvimento de ferramentas.
+    </p>
+
+    <div class="detail-list detail-list--contact">
+      <a href="mailto:kaiobcruz909@gmail.com" class="detail-row detail-row--link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 6.5A1.5 1.5 0 0 1 4.5 5h15A1.5 1.5 0 0 1 21 6.5v11A1.5 1.5 0 0 1 19.5 19h-15A1.5 1.5 0 0 1 3 17.5v-11Z"/><path d="m4 6.5 8 6.5 8-6.5"/></svg>
+        <span>kaiobcruz909@gmail.com</span>
+      </a>
+      <a href="tel:+5521981758201" class="detail-row detail-row--link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 5c0-.6.4-1 1-1h3l2 5-2 1.5a11 11 0 0 0 5.5 5.5L15 15l5 2v3c0 .6-.4 1-1 1C10.5 21 3 13.5 3 5Z"/></svg>
+        <span>(21) 98175-8201</span>
+      </a>
+      <a href="https://www.linkedin.com/in/kaio-barbosa-5b3b1725a/" class="detail-row detail-row--link" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M7.5 10v6.5M7.5 7.5v.01M12 16.5V12.75c0-1.1.7-2 2-2s2 .9 2 2v3.75M12 12.75V16.5"/></svg>
+        <span>linkedin.com/in/kaio-barbosa-5b3b1725a</span>
+      </a>
+    </div>
+    <p class="block__note">
+      Nota: Preferência de contato via e-mail, Não possuo WhatsApp.
+    </p>
+  </section>
+
+  <footer class="footer">
+    <span>© <span id="year"></span> Kaio Barbosa</span>
+    <span class="footer__meta">
+      construído com HTML, CSS &amp; JS · modelo 3D "Keyboard" por
+      <a href="https://sketchfab.com/oscarherry3d" target="_blank" rel="noopener">oscarherry3d</a>
+      (<a href="http://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC-BY-4.0</a>)
+    </span>
+  </footer>
+
+</main>
+
+<script src="js/main.js"></script>
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+    "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+  }
+}
+</script>
+<script type="module" src="js/keyboard-bg.js"></script>
+</body>
+</html>
